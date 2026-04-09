@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کۆمەڵگەی پزیشکی دەوا</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Noto Sans Arabic', sans-serif;
+    margin: 0;
+    direction: rtl;
+    background: #f0f4f8;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background: white;
+    padding: 20px;
+}
+
+h1 {
+    color: #007BFF;
+    font-size: 38px;
+}
+
+.welcome {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+/* Image */
+.hero img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Sections */
+.section {
+    padding: 20px;
+}
+
+.specialty {
+    margin-bottom: 25px;
+}
+
+.specialty h3 {
+    background: #007BFF;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Doctor Card */
+.doctor {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Button */
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e7e34;
+}
+
+/* Booking Form */
+.booking {
+    display: none;
+    margin-top: 10px;
+}
+
+input {
+    margin: 5px 0;
+    padding: 8px;
+    width: 100%;
+}
+
+/* Time */
+#time {
+    text-align: center;
+    padding: 12px;
+    background: #ddd;
+    font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>کۆمەڵگەی پزیشکی دەوا</h1>
+    <div class="welcome">بەخێربین بۆ کۆمەڵگەی پزیشکی دەوا</div>
+</header>
+
+<div class="hero">
+    <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3" alt="hospital">
+</div>
+
+<div id="time"></div>
+
+<div class="section">
+
+<h2>پزیشکەکان بە پێی پسپۆڕی</h2>
+
+<!-- Specialties -->
+<div class="specialty">
+    <h3>نەشتەرگەری گشتی</h3>
+    <div class="doctor">
+        <h4>د. کاروان</h4>
+        <p>بڕوانامە: دکتۆرا</p>
+        <p>پسپۆڕی: نەشتەرگەری</p>
+        <button onclick="showForm(this)">وەرگرتنی کات</button>
+        <div class="booking">
+            <input type="date">
+            <input type="time">
+            <button onclick="confirmBooking()">پشتڕاستکردنەوە</button>
+        </div>
+    </div>
+</div>
+
+<div class="specialty">
+    <h3>دڵ</h3>
+    <div class="doctor">
+        <h4>د. ئاوات</h4>
+        <p>بڕوانامە: دکتۆرا</p>
+        <p>پسپۆڕی: دڵ</p>
+        <button onclick="showForm(this)">وەرگرتنی کات</button>
+        <div class="booking">
+            <input type="date">
+            <input type="time">
+            <button onclick="confirmBooking()">پشتڕاستکردنەوە</button>
+        </div>
+    </div>
+</div>
+
+<div class="specialty">
+    <h3>چاو</h3>
+    <div class="doctor">
+        <h4>د. سارا</h4>
+        <p>بڕوانامە: ماستەر</p>
+        <p>پسپۆڕی: چاو</p>
+        <button onclick="showForm(this)">وەرگرتنی کات</button>
+        <div class="booking">
+            <input type="date">
+            <input type="time">
+            <button onclick="confirmBooking()">پشتڕاستکردنەوە</button>
+        </div>
+    </div>
+</div>
+
+<div class="specialty">
+    <h3>هەناوی</h3>
+    <div class="doctor">
+        <h4>د. هێوا</h4>
+        <p>بڕوانامە: دکتۆرا</p>
+        <p>پسپۆڕی: هەناوی</p>
+        <button onclick="showForm(this)">وەرگرتنی کات</button>
+        <div class="booking">
+            <input type="date">
+            <input type="time">
+            <button onclick="confirmBooking()">پشتڕاستکردنەوە</button>
+        </div>
+    </div>
+</div>
+
+<div class="specialty">
+    <h3>تاقیگە</h3>
+    <div class="doctor">
+        <h4>د. ئارام</h4>
+        <p>بڕوانامە: ماستەر</p>
+        <p>پسپۆڕی: تاقیگە</p>
+        <button onclick="showForm(this)">وەرگرتنی کات</button>
+        <div class="booking">
+            <input type="date">
+            <input type="time">
+            <button onclick="confirmBooking()">پشتڕاستکردنەوە</button>
+        </div>
+    </div>
+</div>
+
+<div class="specialty">
+    <h3>تیشک و سۆنەر</h3>
+    <div class="doctor">
+        <h4>د. ڕێباز</h4>
+        <p>بڕوانامە: دکتۆرا</p>
+        <p>پسپۆڕی: تیشک</p>
+        <button onclick="showForm(this)">وەرگرتنی کات</button>
+        <div class="booking">
+            <input type="date">
+            <input type="time">
+            <button onclick="confirmBooking()">پشتڕاستکردنەوە</button>
+        </div>
+    </div>
+</div>
+
+<div class="specialty">
+    <h3>ئێسک و شکاوی</h3>
+    <div class="doctor">
+        <h4>د. ژیان</h4>
+        <p>بڕوانامە: ماستەر</p>
+        <p>پسپۆڕی: ئێسک</p>
+        <button onclick="showForm(this)">وەرگرتنی کات</button>
+        <div class="booking">
+            <input type="date">
+            <input type="time">
+            <button onclick="confirmBooking()">پشتڕاستکردنەوە</button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script>
+// Show booking form
+function showForm(btn) {
+    let form = btn.nextElementSibling;
+    form.style.display = "block";
+}
+
+// Confirm booking
+function confirmBooking() {
+    alert("کاتەکەت تۆمار کرا!");
+}
+
+// Time
+function updateTime() {
+    let now = new Date();
+    document.getElementById("time").innerHTML =
+        "کات: " + now.toLocaleTimeString() + " | بەروار: " + now.toLocaleDateString();
+}
+setInterval(updateTime, 1000);
+</script>
+
+</body>
+</html>
